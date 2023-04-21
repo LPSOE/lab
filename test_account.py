@@ -11,6 +11,7 @@ class Test:
 
     def test_init(self):
         assert self.a1.get_name() == 'John'
+        assert self.a1.get_balance() == 0
 
     def test_deposit(self):
         # negative, zero, positive
@@ -37,4 +38,4 @@ class Test:
         assert self.a1.get_balance() == 10
 
         assert self.a1.withdraw(1.5) is True
-        assert self.a1.get_balance() == pytest.approx(8.5)
+        assert self.a1.get_balance() == 8.5
