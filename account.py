@@ -14,7 +14,8 @@ class Account:
         function to set up deposit object
         :param amount: cannot deposit negative amount of money
         :return: False
-
+        :param amount: amount add upon account balance
+        :return: True
         """
         if amount <= 0:
             return False
@@ -24,6 +25,13 @@ class Account:
 
 
     def withdraw(self, amount) -> bool:
+        """
+        :param amount: amount less then 0 or more than account balance
+        :return: false
+
+        :param amount: decrement amount to account balance
+        :return: True
+        """
         if amount <= 0 or amount >= self.__account_balance:
             return False
         else:
@@ -31,7 +39,13 @@ class Account:
             return True
 
     def get_balance(self):
+        """
+        :return: account balance
+        """
         return self.__account_balance
 
     def get_name(self):
+        """
+        :return: account name
+        """
         return self.__account_name
