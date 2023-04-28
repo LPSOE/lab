@@ -6,7 +6,6 @@ class Account:
         ...
         :param name: Account name
         """
-        name = input(str())
         self.__account_name = name
         self.__account_balance = 0
 
@@ -39,13 +38,13 @@ class Account:
             self.__account_balance -= amount
             return True
 
-    def get_balance(self):
+    def get_balance(self) -> int:
         """
         :return: account balance
         """
         return self.__account_balance
 
-    def get_name(self):
+    def get_name(self) -> str:
         """
         :return: account name
         """
