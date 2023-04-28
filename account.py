@@ -40,12 +40,14 @@ class Account:
 
     def get_balance(self) -> int:
         """
+        type hinting: int
         :return: account balance
         """
         return self.__account_balance
 
     def get_name(self) -> str:
         """
+        type hinting: str
         :return: account name
         """
         return self.__account_name
