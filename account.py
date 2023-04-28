@@ -6,7 +6,8 @@ class Account:
         ...
         :param name: Account name
         """
-        self.__account_name = "John"
+        name = input(str())
+        self.__account_name = name
         self.__account_balance = 0
 
     def deposit(self, amount) -> bool:
