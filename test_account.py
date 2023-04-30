@@ -15,6 +15,10 @@ class Test:
 
     def test_deposit(self):
         # negative, zero, positive
+        self.a1.deposit(100)
+        assert self.a1.withdraw(100) is True
+        assert self.a1.get_balance() == 0
+        
         assert self.a1.deposit(-1.5) is False
         assert self.a1.get_balance() == 0
 
